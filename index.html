@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter's Online Shop</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .cart {
+            margin-top: 20px;
+        }
+        .cart-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Peter's Online Shop</h1>
+    <div class="product" data-id="1" data-name="A pair of torn socks" data-price="10">
+        <h2>A pair of torn socks</h2>
+        <p>Price: $10</p>
+        <button onclick="addToCart(1, 'A pair of torn socks', 10)">Add to Cart</button>
+    </div>
+    <div class="product" data-id="2" data-name="Big Burger" data-price="20">
+        <h2>Big Burger</h2>
+        <p>Price: $20</p>
+        <button onclick="addToCart(2, 'Big Burger', 20)">Add to Cart</button>
+    </div>
+    <div class="product" data-id="3" data-name="A Cook Book" data-price="30">
+        <h2>A Cook Book</h2>
+        <p>Price: $30</p>
+        <button onclick="addToCart(3, 'A Cook Book', 30)">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total"></p>
+        <button onclick="goToCheckout()">Checkout</button>
+        <p id="error-message"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
